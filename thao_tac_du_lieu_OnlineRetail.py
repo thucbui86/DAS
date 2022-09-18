@@ -32,7 +32,7 @@ print(df['Amount'])
 df['Discount'] = np.nan
 condition2 = [(df['Country'] == 'United Kingdom') & (df['Previous'] == '4'),
               (df['Country'] == 'France'),
-              (df['Country'] != 'France') & (df['Country'] != 'France')
+              (df['Country'] != 'United Kingdom') & (df['Country'] != 'France')
               ]
 choice2 = [0.1, 0.05, 0]
 df['Discount'] = np.select(condition2, choice2, default= None)
